@@ -28,6 +28,9 @@ def login():
     else:
         return 'get url'
 
+#curl --user "APITest\API.User" --header "Content-Type: application/json" --request POST --data '{"emailAddress":"george.washington@america.com"}' http://
+# 507
+# 630
 # @app.route('/api/add-clair-result/<uuid>', methods=['GET', 'POST'])
 # def addClairResult(uuid):
 #     content = request.get_json(force=True)

@@ -23,7 +23,7 @@ def hello():
 @app.route('/add', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
-        content = request.get_json(force=True)
+        # content = request.get_json(force=True)
         return 'some content'
     else:
         return 'get url'

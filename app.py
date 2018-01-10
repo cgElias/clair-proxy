@@ -24,7 +24,7 @@ def hello():
 def login():
     if request.method == 'POST':
         content = request.get_json(force=True)
-        return content
+        return 'some content'
     else:
         return 'get url'
 

@@ -20,11 +20,18 @@ def hello():
            "<b>Visits:</b> {visits}"
     return html.format(name=os.getenv("NAME", "world"), hostname=socket.gethostname(), visits=visits)
 
-@app.route('/api/add-clair-result/<uuid>', methods=['GET', 'POST'])
-def addClairResult(uuid):
-    content = request.get_json(force=True)
-    print content
-    return uuid
+@app.route('/add', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        return 'post url'
+    else:
+        return 'get url'
+
+# @app.route('/api/add-clair-result/<uuid>', methods=['GET', 'POST'])
+# def addClairResult(uuid):
+#     content = request.get_json(force=True)
+#     print content
+#     return uuid
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=80)
